@@ -5,9 +5,11 @@ node {
         }
         stage('Test') {
             sh './jenkins/scripts/test.sh'
+            input message: 'Lanjutkan ke tahap Deploy?'
         }
         stage('Deploy') {
             sh './jenkins/scripts/deliver.sh'
+            sleep(60)
             input message: 'Sudah selesai menggunakan React App? (Klik "Proceed" untuk mengakhiri)'
             sh './jenkins/scripts/kill.sh'
         }
