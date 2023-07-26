@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Calculator from './calculator/calculator';
 
 class App extends Component {
   render() {
@@ -8,9 +9,10 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Submission CICD Pipeline Dicoding</h1>
         </header>
-        <p className="App-intro">
+        <h1>
           Evando
-        </p>
+        </h1>
+        <Calculator />
       </div>
     );
   }
